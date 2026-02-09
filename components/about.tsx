@@ -113,7 +113,7 @@ export default function About() {
                 transition={{ delay: 0.3, duration: 0.6 }}
               >
                 <p className="text-slate-300 mb-4">
-                  I'm a passionate junior front-end developer with a keen eye
+                  I'm a passionate front-end developer with a keen eye
                   for creating engaging user experiences. With a background in
                   web technologies, I focus on building clean, efficient, and
                   accessible websites.

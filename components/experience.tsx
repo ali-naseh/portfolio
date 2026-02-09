@@ -16,8 +16,28 @@ export default function Experience() {
   const experiences = [
     {
       title: "Front-End Developer",
+      company: "Dade Pardaz Novin",
+      period: "Jun 2025 - Present",
+      description:
+        "Developing responsive web applications using React and Next.js. Collaborating with designers to implement UI/UX designs. Working with REST APIs and state management.",
+      skills: [
+        "Next.js",
+        "MUI",
+        "ShadcnUI",
+        "Tailwind",
+        "React Query",
+        "React Hook Form",
+        "Husky",
+        "Zod",
+        "I18Next",
+        "Axios",
+        "Docker"
+      ],
+    },
+    {
+      title: "Front-End Developer",
       company: "Perfetto Gruppo",
-      period: "Oct 2023 - Present",
+      period: "Nov 2023 - Jun 2025",
       description:
         "Developing responsive web applications using React and Next.js. Collaborating with designers to implement UI/UX designs. Working with REST APIs and state management.",
       skills: [
@@ -36,9 +56,9 @@ export default function Experience() {
       ],
     },
     {
-      title: "Freelance Front End Developer",
-      company: "Digital Creations",
-      period: "Feb 2023 - Jul 2023",
+      title: "Front-End Development Internship",
+      company: "Kharazmi University",
+      period: "Nov 2022 - Nov 2023",
       description:
         "Building a cloud-based platform for developers. Implementing features such as user authentication, file management, and real-time collaboration. Ensuring cross-browser compatibility and performance optimization.",
       skills: ["React", "AntD", "Axios"],
@@ -102,7 +122,7 @@ export default function Experience() {
                 Experience & Education
               </span>
             </h2>
-            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
               <Button className="bg-teal-600 hover:bg-teal-700 relative overflow-hidden group">
                 <span className="relative z-10 flex items-center">
                   <Download className="mr-2 h-4 w-4 group-hover:animate-bounce" />
@@ -110,7 +130,7 @@ export default function Experience() {
                 </span>
                 <span className="absolute inset-0 bg-teal-500 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
               </Button>
-            </motion.div>
+            </motion.div> */}
           </div>
 
           <div className="space-y-12">

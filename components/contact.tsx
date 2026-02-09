@@ -30,7 +30,7 @@ export default function Contact() {
   });
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -90,11 +90,12 @@ export default function Contact() {
             using the form below or through my contact information.
           </p>
 
-          <div className="grid md:grid-cols-2 gap-8">
+          <div className="grid md:grid-cols-3 gap-8">
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.2, duration: 0.6 }}
+              className="col-start-2"
             >
               <Card className="h-full bg-slate-800 border-slate-700">
                 <CardHeader>
@@ -169,7 +170,7 @@ export default function Contact() {
               </Card>
             </motion.div>
 
-            <motion.div
+            {/* <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={inView ? { opacity: 1, x: 0 } : {}}
               transition={{ delay: 0.3, duration: 0.6 }}
@@ -259,7 +260,7 @@ export default function Contact() {
                   </form>
                 </CardContent>
               </Card>
-            </motion.div>
+            </motion.div> */}
           </div>
         </motion.div>
       </div>

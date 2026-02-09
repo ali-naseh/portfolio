@@ -13,7 +13,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Github } from "lucide-react";
+import { Github, Link2 } from "lucide-react";
 import Link from "next/link";
 
 export default function Projects() {
@@ -24,12 +24,37 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "Mocha Cloud",
+      title: "Sinava",
       description:
-        "A cloud-based platform(SaaS) for porviding and online IDE for developers on different programming languages.",
-      image: "/mocha.png?height=400&width=600",
-      tags: ["React", "AndD", "API", "Responsive Design", "Axios"],
-      githubUrl: "https://github.com/ali-naseh/mocha",
+        "Very simple crud application with search for book management",
+      image: "/sinava.png?height=400&width=600",
+      tags: [
+        "NextJs",
+        "MUI",
+        "React-hook-form",
+        "Zod",
+        "ContextApi",
+        "Axios",
+        "React Query",
+      ],
+      // githubUrl: "https://github.com/ali-naseh/temp-store",
+      liveLink: "https://sinava.co/",
+    },
+    {
+      title: "Temp Store",
+      description:
+        "Very simple crud application with search for book management",
+      image: "/store.png?height=400&width=600",
+      tags: [
+        "NextJs",
+        "ShadcnUI",
+        "Tailwind",
+        "Responsive Design",
+        "Axios",
+        "React Query",
+      ],
+      githubUrl: "https://github.com/ali-naseh/temp-store",
+      liveLink: "https://temp-store-one.vercel.app",
     },
     {
       title: "E-book Management",
@@ -47,6 +72,15 @@ export default function Projects() {
         "Zod",
         "React Hook Form",
       ],
+      githubUrl: "https://github.com/ali-naseh/nextjs-book-management",
+      liveLink: "https://book-management-six-beta.vercel.app/",
+    },
+    {
+      title: "Mocha Cloud",
+      description:
+        "A cloud-based platform(SaaS) for porviding and online IDE for developers on different programming languages.",
+      image: "/mocha.png?height=400&width=600",
+      tags: ["React", "AndD", "API", "Responsive Design", "Axios"],
       githubUrl: "https://github.com/ali-naseh/mocha",
     },
   ];
@@ -152,21 +186,40 @@ export default function Projects() {
                     </div>
                   </CardContent>
                   <CardFooter className="flex justify-between z-50">
-                    <Link
-                      href={project.githubUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center"
-                    >
-                      <motion.div
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="flex justify-between"
+                    {project.githubUrl && (
+                      <Link
+                        href={project.githubUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center"
                       >
-                        <Github className="mr-2 h-4 w-4" />
-                        Code
-                      </motion.div>
-                    </Link>
+                        <motion.div
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="flex justify-between"
+                        >
+                          <Github className="mr-2 h-4 w-4" />
+                          Code
+                        </motion.div>
+                      </Link>
+                    )}
+                    {project.liveLink && (
+                      <Link
+                        href={project.liveLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="flex items-center"
+                      >
+                        <motion.div
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          className="flex justify-between"
+                        >
+                          <Link2 className="mr-2 h-4 w-4" />
+                          Live
+                        </motion.div>
+                      </Link>
+                    )}
                   </CardFooter>
                 </Card>
               </motion.div>
