@@ -73,7 +73,7 @@ export default function Projects() {
         "React Hook Form",
       ],
       githubUrl: "https://github.com/ali-naseh/nextjs-book-management",
-      liveLink: "https://book-management-six-beta.vercel.app/",
+      liveLink: "https://book-management-topaz-six.vercel.app/",
     },
     {
       title: "Mocha Cloud",
